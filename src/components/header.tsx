@@ -59,8 +59,18 @@ export default function Header() {
     refreshCartCount();
 
     // ✅ Jab bhi cartUpdated event fire ho, count update karo
-    window.addEventListener("cartUpdated", refreshCartCount);
-    return () => window.removeEventListener("cartUpdated", refreshCartCount);
+    // window.addEventListener("cartUpdated", refreshCartCount);
+    // return () => window.removeEventListener("cartUpdated", refreshCartCount);
+    const handleCartUpdate = (e: Event) => {
+  const detail = (e as CustomEvent).detail;
+  if (detail?.increment) {
+    setCartCount(prev => prev + detail.increment);
+  } else {
+    refreshCartCount();
+  }
+};
+window.addEventListener("cartUpdated", handleCartUpdate);
+return () => window.removeEventListener("cartUpdated", handleCartUpdate);
   }, []);
 
   const links = data?.navLinks || [];

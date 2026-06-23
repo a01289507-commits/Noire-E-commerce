@@ -62,7 +62,8 @@ export default function ProductActions({ productId, name, price, image }: Props)
         throw new Error(data.message || "Failed to add to cart");
       }
 
-      window.dispatchEvent(new Event("cartUpdated"));
+      // window.dispatchEvent(new Event("cartUpdated"));
+      window.dispatchEvent(new CustomEvent("cartUpdated", { detail: { increment: 1 } }));
       setAlreadyInCart(true); // ✅ button change ho jaye
     } catch (error: any) {
       console.error("Add to cart error:", error);
