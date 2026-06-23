@@ -9,7 +9,7 @@ export default async function ContactPage() {
   const data = await getContactData();
 
   return (
-   <div className="bg-gradient-to-b from-[#c2c5aa] to-[#F1EFE9] border-t border-zinc-200 ">
+   <div className="bg-gradient-to-b from-white to-[#F1EFE9] border-t border-zinc-200 ">
    <main className="max-w-7xl mx-auto px-6 py-12 text-zinc-900 w-full">
   
       <div className="grid md:grid-cols-2 gap-20">

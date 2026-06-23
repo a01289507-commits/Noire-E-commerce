@@ -1,5 +1,5 @@
 import { writeClient } from "@/src/sanity/lib/writeClient";
-import { client } from "@/sanity/lib/client"; // read ke liye
+import { client } from "@/src/sanity/lib/client";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {

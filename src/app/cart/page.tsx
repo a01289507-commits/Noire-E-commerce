@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Trash2, ShoppingBag, ArrowRight } from "lucide-react";
-import { client } from "@/sanity/lib/client";
+import { client } from "@/src/sanity/lib/client";
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<any[]>([]);

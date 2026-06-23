@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { client } from "@/sanity/lib/client";
+import { client } from "../sanity/lib/client";
+
 
 const formatUrl = (url: string) => {
   if (!url) return "#";
@@ -155,7 +156,7 @@ export default function Header() {
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           isMobileMenuOpen
-            ? "max-h-screen border-t border-gray-100"
+            ? "max-h-screen border-t border-gray-700"
             : "max-h-0"
         }`}
       >

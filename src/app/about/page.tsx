@@ -12,7 +12,7 @@ export default async function AboutPage() {
   if (!data) return <div className="text-center py-20">Loading...</div>;
 
   return (
-    <main className="bg-gradient-to-b from-[#8fbebf] to-[#8fbebf] border-t border-zinc-200 text-zinc-900 text-zinc-900 pb-20">
+    <main className="bg-gradient-to-b from-white to-[#c2e8e9] border-t border-zinc-200 text-zinc-900 text-zinc-900 pb-20">
       {/* Editorial Hero */}
       <section className="grid md:grid-cols-12 gap-6 p-6 md:p-12 items-center">
         <div className="md:col-span-5 space-y-8">
